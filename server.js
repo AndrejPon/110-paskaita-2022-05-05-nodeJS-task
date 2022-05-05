@@ -51,8 +51,8 @@ app.post('/products', async (req, res) => {
     await connection.close();
     res.json({ rows, fields });
   } catch (error) {
-    console.log('klaida prisijungiant', error);
-    res.status(500).send('klaida kazkur del kazko');
+    console.log('connection error', error);
+    res.status(500).send('Something went wrong');
   }
 });
 
@@ -65,8 +65,8 @@ app.get('/products', async (req, res) => {
     await connection.close();
     res.json(rows);
   } catch (error) {
-    console.log('klaida prisijungiant', error);
-    res.status(500).send('klaida kazkur del kazko');
+    console.log('connection error', error);
+    res.status(500).send('Something went wrong');
   }
 });
 
@@ -79,8 +79,8 @@ app.get('/totalproducts', async (req, res) => {
     await connection.close();
     res.json(rows);
   } catch (error) {
-    console.log('klaida prisijungiant', error);
-    res.status(500).send('klaida kazkur del kazko');
+    console.log('connection error', error);
+    res.status(500).send('Something went wrong');
   }
 });
 
@@ -93,8 +93,8 @@ app.delete('/products/:id', async (req, res) => {
     await connection.close();
     res.json(rows);
   } catch (error) {
-    console.log('klaida prisijungiant', error);
-    res.status(500).send('klaida kazkur del kazko');
+    console.log('connection error', error);
+    res.status(500).send('Something went wrong');
   }
 });
 
