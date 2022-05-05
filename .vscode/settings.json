@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "cao-db-mysql-do-user-10933485-0.b.db.ondigitalocean.com",
+            "port": 25060,
+            "driver": "MySQL",
+            "name": "DigitalOcean",
+            "database": "defaultdb",
+            "username": "doadmin",
+            "password": "W34h8jjcDuYN8lJE"
+        }
+    ]
+}
