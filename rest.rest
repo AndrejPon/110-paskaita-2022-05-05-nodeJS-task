@@ -2,8 +2,11 @@ GET http://localhost:5000/test
 
 ###
 
-POST http://localhost:5000/createtable
-Content-Type: application/json
+GET http://localhost:5000/products
+
+###
+
+GET http://localhost:5000/totalproducts
 
 ###
 
@@ -19,6 +22,4 @@ Content-Type: application/json
 
 }
 
-###
 
-GET http://localhost:5000/products

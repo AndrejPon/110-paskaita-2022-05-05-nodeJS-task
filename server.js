@@ -76,4 +76,18 @@ app.get('/products', async (req, res) => {
   }
 });
 
+app.get('/totalproducts', async (req, res) => {
+  try {
+    const connection = await mysql.createConnection(mysqlConfig);
+    console.log('Connected to DB===');
+    const sql = 'SELECT COUNT(id) AS TotalProducts FROM products';
+    const [rows] = await connection.execute(sql);
+    await connection.close();
+    res.json(rows);
+  } catch (error) {
+    console.log('klaida prisijungiant', error);
+    res.status(500).send('klaida kazkur del kazko');
+  }
+});
+
 app.listen(PORT, console.log(`Server is running on port ${PORT}`));
