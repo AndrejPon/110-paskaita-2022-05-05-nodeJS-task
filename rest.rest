@@ -1,20 +1,20 @@
-GET http://localhost:5000/test
+GET http://localhost:8000/test
 
 ###
 
-GET http://localhost:5000/products
+GET http://localhost:8000/products
 
 ###
 
-GET http://localhost:5000/totalproducts
+GET http://localhost:8000/totalproducts
 
 ###
 
-POST http://localhost:5000/products
+POST http://localhost:8000/products
 Content-Type: application/json
 
 {
-    "id": 3,
+    "id": 25,
     "image_url": "https://cdn.barbora.lt/products/22a657a8-b4eb-4d74-85ab-66f9b84cf6e6_m.png",
     "title": "Kepintos ir sūdytos pistacijos, 1 kg",
     "description": "Kilmės šalis: JAV, Grynasis kiekis (g/ml): 1000",
@@ -22,4 +22,6 @@ Content-Type: application/json
 
 }
 
+### 
 
+DELETE http://localhost:8000/products/25
